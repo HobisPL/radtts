@@ -52,6 +52,15 @@ def get_symbols(symbol_set):
         _letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
         _arpabet = ["@" + s for s in arpabet]
         symbols = list(_punctuation + _math + _special + _accented + _numbers + _letters) + _arpabet
+    elif symbol_set == 'polski':
+        _punctuation = '!\'",.:;? '
+        _math = ''
+        _special = '_'
+        _accented = 'áçéêëñöøćž'
+        _numbers = ''
+        _letters = 'AĄBCĆDEĘFGHIJKLŁMNŃOÓPRSŚTUWYZŹŻaąbcćdeęfghijklłmnńoóprsśtuwyzźż'
+        _arpabet = ["@" + s for s in arpabet]
+        symbols = list(_punctuation + _math + _special + _accented + _numbers + _letters) + _arpabet
     else:
         raise Exception("{} symbol set does not exist".format(symbol_set))
 
